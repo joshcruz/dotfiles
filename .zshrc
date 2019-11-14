@@ -124,7 +124,7 @@ alias hh=hstr                     # hh to be alias for hstr
 export HISTFILE=~/.zsh_history    # ensure history file visibility
 export HSTR_CONFIG=hicolor        # get more colors
 export HISTFILESIZE=999999999     # increase size of history
-export HISTSIZE=${HISFILESIZE}    # increase number of history items
+export HISTSIZE=${HISTFILESIZE}    # increase number of history items
 export HSTR_CONFIG=raw-history-view   # show normal history
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}" # ensures syncing
 bindkey -s "\C-r" "\eqhstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc
