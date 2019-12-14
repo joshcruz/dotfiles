@@ -10,18 +10,14 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set backspace=indent,eol,start
-set fileformat=unix
 set encoding=utf-8  
-hi CursorLine cterm=None
 
-" --------------------------
 map <C-E> :Lexplore<CR>
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:netrw_altv=1
 let g:netrw_winsize=20
 
-" --------------------------
 function! GitBranch()
   return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 endfunction
@@ -42,7 +38,6 @@ set statusline+=\
 set statusline+=%P
 set statusline+=\ 
 
-" --------------------------
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
