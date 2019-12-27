@@ -98,6 +98,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# HSTR configuration - add this to ~/.bashrc
+alias hh=hstr                     # hh to be alias for hstr
+export HISTFILE=~/.zsh_history    # ensure history file visibility
+export HSTR_CONFIG=hicolor        # get more colors
+export HISTFILESIZE=999999999     # increase size of history
+export HISTSIZE=${HISTFILESIZE}    # increase number of history items
+export HSTR_CONFIG=raw-history-view   # show normal history
+export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}" # ensures syncing
+bindkey -s "\C-r" "\eqhstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc
+
 # python
 alias python='python3'
 
@@ -119,12 +129,5 @@ export GOPATH=$HOME/go
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# HSTR configuration - add this to ~/.bashrc
-alias hh=hstr                     # hh to be alias for hstr
-export HISTFILE=~/.zsh_history    # ensure history file visibility
-export HSTR_CONFIG=hicolor        # get more colors
-export HISTFILESIZE=999999999     # increase size of history
-export HISTSIZE=${HISTFILESIZE}    # increase number of history items
-export HSTR_CONFIG=raw-history-view   # show normal history
-export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}" # ensures syncing
-bindkey -s "\C-r" "\eqhstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc
+# pip path
+export PATH=$PATH:~/Library/Python/3.7/bin/
