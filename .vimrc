@@ -13,6 +13,26 @@ set backspace=indent,eol,start
 set encoding=utf-8  
 
 map <C-E> :Lexplore<CR>
+let g:netrw_banner = 0
+let g:netrw_liststyle=3
+let g:netrw_altv=1
+let g:netrw_winsize=20
+
+set number
+set wrap
+set ruler
+set hlsearch
+set autoindent
+set smartindent
+set expandtab
+set textwidth=150
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set backspace=indent,eol,start
+set encoding=utf-8
+
+map <C-E> :Lexplore<CR>
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:netrw_altv=1
@@ -150,9 +170,14 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+let g:ale_python_flake8_use_global=1
+let g:ale_linters = {'python': ['flake8']}
+
 set laststatus=2
+set statusline=
 set statusline+=\ 
 set statusline+=\%{fugitive#statusline()}
+set statusline+=\ 
 set statusline+=\ 
 set statusline+=%f
 set statusline+=%=
