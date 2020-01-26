@@ -111,9 +111,6 @@ bindkey -s "\C-r" "\eqhstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc
 # python
 alias python='python3'
 
-# thefuck
-eval $(thefuck --alias)
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -123,11 +120,16 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/usr/local/sbin:$PATH"
 
 # Golang PATH
-export PATH=$PATH:/usr/local/go/bin
+# export PATH=$PATH:/usr/local/go/bin
+export GOBIN=$HOME/go/bin
 export GOPATH=$HOME/go
+export PATH=$PATH:$GOBIN
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # pip path
 export PATH=$PATH:~/Library/Python/3.7/bin/
+
+# gem path
+export PATH=$PATH:/Users/joshua/.gem/ruby/2.6.0/bin

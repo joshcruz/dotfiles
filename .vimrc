@@ -1,3 +1,5 @@
+filetype plugin indent on
+
 set number
 set wrap
 set ruler
@@ -5,6 +7,7 @@ set hlsearch
 set autoindent
 set smartindent
 set expandtab
+set cindent
 set textwidth=150
 set shiftwidth=4
 set softtabstop=4
@@ -173,6 +176,10 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:ale_python_flake8_use_global=1
 let g:ale_linters = {'python': ['flake8']}
 
+let g:go_fmt_command="goimports"
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 set laststatus=2
 set statusline=
 set statusline+=\ 
@@ -193,4 +200,5 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
+Plug 'fatih/vim-go'
 call plug#end()
