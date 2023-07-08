@@ -1,0 +1,14 @@
+set number
+set wrap
+set ruler
+set hlsearch
+set autoindent
+set smartindent
+set expandtab
+set cindent
+set textwidth=79
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set backspace=indent,eol,start
+set encoding=utf-8  

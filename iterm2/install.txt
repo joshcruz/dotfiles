@@ -1,0 +1,5 @@
+com.googlecode.iterm2.plist
+- my iTerm2 config (copy this into ~/Library/Preferences) 
+
+Default.json
+- my default iTerm2 UI (iTerm2 > Settings > Profiles > Other Actions... > Import JSON Profiles...)
