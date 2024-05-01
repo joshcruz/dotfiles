@@ -15,8 +15,8 @@ taps=(
 brew tap "${taps[@]}"
 
 apps=(
-    ansible
     aws-nuke
+    awscli
     coreutils
     docker
     git
@@ -28,6 +28,7 @@ apps=(
     k3d
     kind
     kubernetes-cli
+    pyenv
     python
     python3
     minikube
@@ -40,7 +41,6 @@ apps=(
     vim
     tree
     wget
-    yarn
     hashicorp/tap/terraform
 )
 
@@ -49,13 +49,11 @@ brew install "${apps[@]}"
 cask=(
     alfred
     appcleaner
-    bartender
+    bruno
     docker
-    firefox
     flux
+    fork
     google-chrome
-    insomnia
-    iterm2
     notion
     rectangle
     slack
